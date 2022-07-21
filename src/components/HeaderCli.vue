@@ -16,6 +16,10 @@ export default {
 </script>
 
 <style scoped>
-
+header{
+    width: 100%;
+    height: 5rem;
+    background-color: black;
+}
 
 </style>
