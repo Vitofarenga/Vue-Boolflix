@@ -1,6 +1,6 @@
 <template>
   <main>
-    <CardsList />
+    <CardsList v-for="(film, index) in films" :key="index"/>
   </main>
 </template>
 
@@ -9,7 +9,13 @@
 import CardsList from './/CardsList.vue'
 
 export default {
-components:{
+    props:{
+    'films' : {
+        required: true,
+        type: Array,
+    },
+},
+    components:{
     CardsList,
 }
 }

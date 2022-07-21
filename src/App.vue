@@ -1,17 +1,17 @@
 <template>
   <div id="app">
    <HeaderCli />
-   <MainCli />
+   <MainCli :films="films" />
    <FooterCli />
   </div>
 </template>
 
 <script>
 
-import HeaderCli from './components/HeaderCli.vue'
-import MainCli from './components/MainCli.vue'
-import FooterCli from './components/FooterCli.vue'
-
+import HeaderCli from './components/HeaderCli.vue';
+import MainCli from './components/MainCli.vue';
+import FooterCli from './components/FooterCli.vue';
+import axios from 'axios';
 
 export default {
   name: 'App',
@@ -19,16 +19,18 @@ export default {
     HeaderCli,
     MainCli,
     FooterCli,
+  },
+  data:function(){
+    return{
+      films: ['s'],
+      apiUrl : 'https://api.themoviedb.org/3/search/movie/550?api_key=c18cf7224de4f7650fa675de8757d068'
+    }
   }
 }
 </script>
 <style lang="scss">
 @import 'bootstrap';
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 *{
   margin: 0;
   padding: 0;
