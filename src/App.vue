@@ -12,6 +12,7 @@ import HeaderCli from './components/HeaderCli.vue'
 import MainCli from './components/MainCli.vue'
 import FooterCli from './components/FooterCli.vue'
 
+
 export default {
   name: 'App',
   components: {
@@ -22,6 +23,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@import 'bootstrap';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
