@@ -1,9 +1,8 @@
 <template>
   <div>
-    <p>{{film.title}}</p>
-    <p>{{film.original_title}}</p>
-    <p>{{film.original_language}}</p>
-    <p>{{film.vote_average}}</p>
+    <ul>
+      <li>{{film.title}} - {{film.original_title}} - {{film.original_language}} - {{film.vote_average}}</li>
+    </ul>
   </div>
 </template>
 
