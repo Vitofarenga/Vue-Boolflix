@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <HeaderCli />
+   <HeaderCli @search = "getFilms"/>
    <MainCli :films="films" />
    <FooterCli />
   </div>
@@ -22,10 +22,19 @@ export default {
   },
   data:function(){
     return{
-      films: ['s'],
-      apiUrl : 'https://api.themoviedb.org/3/search/movie/550?api_key=c18cf7224de4f7650fa675de8757d068'
+      films: [],
+      apiUrl : 'https://api.themoviedb.org/3/search/movie?api_key=c18cf7224de4f7650fa675de8757d068&query='
     }
-  }
+  },
+  methods:{
+      getFilms: function(query){
+        axios.get(this.apiUrl + query)
+        .then((result)=>{
+          console.log(result.data.results);
+          this.films = result.data.results
+        })
+      },
+  },
 }
 </script>
 <style lang="scss">

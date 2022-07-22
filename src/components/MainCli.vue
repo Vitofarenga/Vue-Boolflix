@@ -1,6 +1,7 @@
 <template>
   <main>
-    <CardsList v-for="(film, index) in films" :key="index"/>
+    <CardsList v-for="(film, index) in films" :key="index"
+    :film= "film"/>
   </main>
 </template>
 
