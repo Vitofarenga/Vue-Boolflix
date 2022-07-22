@@ -34,6 +34,7 @@ export default {
           this.films = result.data.results
         })
       },
+      
   },
 }
 </script>
