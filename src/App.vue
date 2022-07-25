@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-   <HeaderCli @search = "getFilms"/>
-   <MainCli :films="films" />
+   <HeaderCli @search = "getFilms; getSeries;" />
+   <MainCli :films="films" :series="series"/>
    <FooterCli />
   </div>
 </template>
@@ -22,6 +22,7 @@ export default {
   },
   data:function(){
     return{
+      series : [],
       films: [],
       apiUrl : 'https://api.themoviedb.org/3/search/movie?api_key=c18cf7224de4f7650fa675de8757d068&query='
     }
@@ -32,6 +33,13 @@ export default {
         .then((result)=>{
           console.log(result.data.results);
           this.films = result.data.results
+        })
+      },
+      getSeries: function(query){
+        axios.get(this.apiUrl + query)
+        .then((result)=>{
+          console.log(result.data.results);
+          this.series = result.data.results
         })
       },
       

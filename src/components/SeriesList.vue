@@ -1,10 +1,10 @@
 <template>
   <div>
     <ul>
-      <li>{{film.title}}</li>
-      <li>{{film.original_title}}</li>
-      <li><img :src="flag(film.original_language)" alt=""></li>
-      <li>{{film.vote_average}}</li>
+      <li>{{serie.title}}</li>
+      <li>{{serie.original_title}}</li>
+      <li><img :src="flag(serie.original_language)" alt=""></li>
+      <li>{{serie.vote_average}}</li>
     </ul>
   </div>
 </template>
@@ -12,8 +12,8 @@
 <script>
 export default {
   props:{
-      'film' : {
-        film: Object,
+      'serie' : {
+        serie: Object,
       }
   },
    data:function(){
