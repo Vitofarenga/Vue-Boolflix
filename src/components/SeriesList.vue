@@ -1,8 +1,8 @@
 <template>
   <div>
     <ul>
-      <li>{{serie.title}}</li>
-      <li>{{serie.original_title}}</li>
+      <li>{{serie.name}}</li>
+      <li>{{serie.original_name}}</li>
       <li><img :src="flag(serie.original_language)" alt=""></li>
       <li>{{serie.vote_average}}</li>
     </ul>
